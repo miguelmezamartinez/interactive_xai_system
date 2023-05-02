@@ -1,0 +1,10 @@
+node_modules
+# Byte-compiled / optimized / DLL files
+API/__pycache__/
+API/__pycache__/
+
+
+
+experiments/
+*.db
+*.py[cod]
