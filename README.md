@@ -2,7 +2,7 @@
 
 ---
 
-**Paper**: Designing Interactive Explainable AI Systems for End-users
+**Paper**: Designing Interactive Explainable AI Systems for Lay Users
 
 **Authors**: Miguel Angel Meza Martínez & Alexander Maedche
 
