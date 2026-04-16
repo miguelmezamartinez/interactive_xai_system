@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # Frontend npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/Frontend/app"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+
+  # Backend Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/API"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    ignore:
+      # TensorFlow 2.3.0 is required for thesis reproducibility.
+      # Updating it would break all XAI library dependencies.
+      # This is an academic reference implementation, not a deployed service.
+      - dependency-name: "tensorflow"
+      - dependency-name: "tensorflow-macos"
+      # These XAI libraries are pinned to thesis-era versions
+      - dependency-name: "dice-ml"
+      - dependency-name: "lime"
+      - dependency-name: "shap"
